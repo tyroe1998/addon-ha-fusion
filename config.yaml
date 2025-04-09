@@ -12,7 +12,7 @@ arch:
 init: false
 
 # homepage of the add-on
-url: https://github.com/tyroe1998/addon-ha-fusion
+url: https://github.com/matt8707/addon-ha-fusion
 
 # icon for the menu panel integration
 panel_icon: mdi:atom
@@ -23,6 +23,28 @@ panel_admin: false
 # security profile
 apparmor: false
 
+# provide full access to the host filesystem
+full_access: true
+
+# privileged access
+privileged:
+  - NET_ADMIN
+  - SYS_ADMIN
+  - SYS_RAWIO
+  - SYS_TIME
+  - SYS_NICE
+  - SYS_RESOURCE
+  - SYS_PTRACE
+
+# allow mapping of additional directories
+map:
+  - config:rw
+  - ssl:rw
+  - addons:rw
+  - backup:rw
+  - media:rw
+  - share:rw
+
 # ingress feature for the add-on
 ingress: true
 ingress_stream: true
@@ -32,7 +54,7 @@ hassio_api: true
 
 # port to expose, null defaults to disabled
 ports:
-  8099/tcp: 5050
+  8099/tcp: null
 
 # docker hub
-image: tyroe1998/addon-ha-fusion-{arch}
+image: matt8707/addon-ha-fusion-{arch}
