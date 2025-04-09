@@ -32,7 +32,7 @@ hassio_api: true
 
 # port to expose, null defaults to disabled
 ports:
-  8099/tcp: null
+  8099/tcp: 5050
 
 # docker hub
 image: tyroe1998/addon-ha-fusion-{arch}
