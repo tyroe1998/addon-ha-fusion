@@ -21,7 +21,7 @@ panel_icon: mdi:atom
 panel_admin: false
 
 # security profile
-apparmor: true
+apparmor: false
 
 # ingress feature for the add-on
 ingress: true
